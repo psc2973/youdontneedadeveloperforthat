@@ -1,0 +1,33 @@
+{
+  "id": "siteHeader",
+  "name": "Site Header",
+  "icon": "screen",
+  "titleParameter": "brand",
+  "parameters": [
+    {
+      "id": "brand",
+      "name": "Brand",
+      "type": "text",
+      "typeConfig": {
+        "multiline": false
+      }
+    },
+    {
+      "id": "brandSuffix",
+      "name": "Brand suffix",
+      "type": "text",
+      "typeConfig": {
+        "multiline": false
+      }
+    },
+    {
+      "id": "eyebrow",
+      "name": "Eyebrow",
+      "type": "text",
+      "typeConfig": {
+        "multiline": false
+      }
+    }
+  ],
+  "slots": []
+}

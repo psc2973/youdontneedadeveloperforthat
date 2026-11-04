@@ -1,0 +1,25 @@
+{
+  "id": "manifestoRule",
+  "name": "Manifesto Rule",
+  "icon": "screen",
+  "titleParameter": "title",
+  "parameters": [
+    {
+      "id": "title",
+      "name": "Title",
+      "type": "text",
+      "typeConfig": {
+        "multiline": false
+      }
+    },
+    {
+      "id": "text",
+      "name": "Text",
+      "type": "text",
+      "typeConfig": {
+        "multiline": true
+      }
+    }
+  ],
+  "slots": []
+}

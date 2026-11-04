@@ -1,0 +1,39 @@
+{
+  "id": "callToAction",
+  "name": "Call To Action",
+  "icon": "screen",
+  "titleParameter": "headline",
+  "parameters": [
+    {
+      "id": "headline",
+      "name": "Headline",
+      "type": "text",
+      "typeConfig": {
+        "multiline": false
+      }
+    },
+    {
+      "id": "body",
+      "name": "Body",
+      "type": "text",
+      "typeConfig": {
+        "multiline": true
+      }
+    },
+    {
+      "id": "buttonLabel",
+      "name": "Button label",
+      "type": "text",
+      "typeConfig": {
+        "multiline": false
+      }
+    },
+    {
+      "id": "buttonLink",
+      "name": "Button link",
+      "type": "link",
+      "typeConfig": {}
+    }
+  ],
+  "slots": []
+}

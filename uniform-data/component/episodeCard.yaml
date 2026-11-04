@@ -1,0 +1,41 @@
+{
+  "id": "episodeCard",
+  "name": "Episode Card",
+  "icon": "screen",
+  "titleParameter": "title",
+  "parameters": [
+    {
+      "id": "episodeId",
+      "name": "Episode ID",
+      "type": "text",
+      "typeConfig": {
+        "multiline": false
+      }
+    },
+    {
+      "id": "status",
+      "name": "Status",
+      "type": "text",
+      "typeConfig": {
+        "multiline": false
+      }
+    },
+    {
+      "id": "title",
+      "name": "Title",
+      "type": "text",
+      "typeConfig": {
+        "multiline": false
+      }
+    },
+    {
+      "id": "topic",
+      "name": "Topic",
+      "type": "text",
+      "typeConfig": {
+        "multiline": false
+      }
+    }
+  ],
+  "slots": []
+}

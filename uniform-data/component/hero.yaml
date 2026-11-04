@@ -1,0 +1,121 @@
+{
+  "id": "hero",
+  "name": "Hero",
+  "icon": "screen",
+  "titleParameter": "headline",
+  "parameters": [
+    {
+      "id": "eyebrow",
+      "name": "Eyebrow",
+      "type": "text",
+      "typeConfig": {
+        "multiline": false
+      }
+    },
+    {
+      "id": "headline",
+      "name": "Headline",
+      "type": "text",
+      "typeConfig": {
+        "multiline": false
+      }
+    },
+    {
+      "id": "headlineHighlight",
+      "name": "Headline highlight",
+      "type": "text",
+      "typeConfig": {
+        "multiline": false
+      }
+    },
+    {
+      "id": "tagline",
+      "name": "Tagline (handwritten)",
+      "type": "text",
+      "typeConfig": {
+        "multiline": false
+      }
+    },
+    {
+      "id": "lede",
+      "name": "Lede",
+      "type": "text",
+      "typeConfig": {
+        "multiline": true
+      }
+    },
+    {
+      "id": "ledeStrong",
+      "name": "Lede emphasis",
+      "type": "text",
+      "typeConfig": {
+        "multiline": false
+      }
+    },
+    {
+      "id": "ledeAfter",
+      "name": "Lede ending",
+      "type": "text",
+      "typeConfig": {
+        "multiline": true
+      }
+    },
+    {
+      "id": "badgeRole",
+      "name": "Badge role",
+      "type": "text",
+      "typeConfig": {
+        "multiline": false
+      }
+    },
+    {
+      "id": "badgeAdded",
+      "name": "Badge added role",
+      "type": "text",
+      "typeConfig": {
+        "multiline": false
+      }
+    },
+    {
+      "id": "badgePill",
+      "name": "Badge pill",
+      "type": "text",
+      "typeConfig": {
+        "multiline": false
+      }
+    },
+    {
+      "id": "calTime",
+      "name": "Calendar time",
+      "type": "text",
+      "typeConfig": {
+        "multiline": false
+      }
+    },
+    {
+      "id": "calTitle",
+      "name": "Calendar title",
+      "type": "text",
+      "typeConfig": {
+        "multiline": false
+      }
+    },
+    {
+      "id": "calNote",
+      "name": "Calendar note",
+      "type": "text",
+      "typeConfig": {
+        "multiline": false
+      }
+    },
+    {
+      "id": "calStatus",
+      "name": "Calendar status",
+      "type": "text",
+      "typeConfig": {
+        "multiline": false
+      }
+    }
+  ],
+  "slots": []
+}

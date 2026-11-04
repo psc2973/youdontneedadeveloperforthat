@@ -1,0 +1,24 @@
+{
+  "id": "siteFooter",
+  "name": "Site Footer",
+  "icon": "screen",
+  "parameters": [
+    {
+      "id": "text",
+      "name": "Text",
+      "type": "text",
+      "typeConfig": {
+        "multiline": false
+      }
+    },
+    {
+      "id": "status",
+      "name": "Status",
+      "type": "text",
+      "typeConfig": {
+        "multiline": false
+      }
+    }
+  ],
+  "slots": []
+}

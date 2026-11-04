@@ -1,0 +1,322 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>You Don't Need a Developer for That</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: an issue tracker being cleared. The hero is one ticket that gets closed; episodes are the backlog. */
+:root {
+  --paper: #f5f6f8;
+  --card: #ffffff;
+  --ink: #12141a;
+  --muted: #5b6070;
+  --line: #dde0e7;
+  --accent: #2446ff;
+  --accent-ink: #ffffff;
+  --note: #ffd23f;
+  --note-ink: #2a2200;
+  --wait: #b3471d;
+  --done: #127a4a;
+  --done-bg: #e3f5ec;
+  --wait-bg: #fbeae2;
+  --display: "Archivo", "Arial Narrow", system-ui, sans-serif;
+  --body: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0f1116; --card: #181b23; --ink: #eef0f5; --muted: #9aa0b2; --line: #2a2e3a;
+    --accent: #7d92ff; --accent-ink: #0b0d14; --note: #ffd23f; --note-ink: #2a2200;
+    --wait: #f08a5d; --done: #4fd398; --done-bg: #12291f; --wait-bg: #2e1a12;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0f1116; --card: #181b23; --ink: #eef0f5; --muted: #9aa0b2; --line: #2a2e3a;
+  --accent: #7d92ff; --accent-ink: #0b0d14; --note: #ffd23f; --note-ink: #2a2200;
+  --wait: #f08a5d; --done: #4fd398; --done-bg: #12291f; --wait-bg: #2e1a12;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+.wrap {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+a { color: var(--accent); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+.mono { font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.02em; }
+.eyebrow {
+  font-family: var(--mono); font-size: 0.78rem; text-transform: uppercase;
+  letter-spacing: 0.12em; color: var(--muted);
+}
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; }
+
+/* Top bar */
+.bar { padding-block: 22px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+.brand { font-family: var(--display); font-weight: 800; font-stretch: 110%; font-size: 1rem; letter-spacing: 0.01em; }
+.brand span { color: var(--muted); font-weight: 500; }
+
+/* Hero */
+.hero { padding-block: 40px 80px; display: grid; grid-template-columns: 1.25fr 1fr; gap: 56px; align-items: center; }
+.hero > * { min-width: 0; }
+.hero h1 {
+  font-size: clamp(2.8rem, 7.2vw, 5.6rem);
+  font-weight: 900; font-stretch: 72%;
+  line-height: 0.92; letter-spacing: -0.01em;
+  text-transform: uppercase; margin-top: 18px;
+}
+.hero h1 .strike { position: relative; white-space: nowrap; }
+.hero h1 .strike::after {
+  content: ""; position: absolute; left: -2%; right: -2%; top: 52%;
+  height: 0.12em; background: var(--accent); transform: rotate(-3deg);
+}
+.hero h1 mark { background: var(--note); color: var(--note-ink); padding: 0 0.08em; }
+.lede { max-width: 34em; color: var(--muted); font-size: 1.2rem; margin: 26px 0 0; }
+.lede strong { color: var(--ink); font-weight: 600; }
+
+/* Ticket */
+.ticket {
+  position: relative; background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 22px 22px 24px;
+  box-shadow: 0 1px 0 var(--line), 0 24px 48px -28px rgba(18, 20, 40, 0.35);
+}
+.ticket-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+.pill {
+  font-family: var(--mono); font-size: 0.72rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  padding: 3px 9px; border-radius: 999px; white-space: nowrap;
+}
+.pill.wait { color: var(--wait); background: var(--wait-bg); }
+.pill.done { color: var(--done); background: var(--done-bg); }
+.ticket h3 { font-family: var(--body); font-weight: 600; font-size: 1.2rem; line-height: 1.35; margin: 14px 0 16px; }
+.meta { display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; margin: 0; font-size: 0.92rem; }
+.meta dt { color: var(--muted); }
+.meta dd { margin: 0; }
+.meta .crossed { text-decoration: line-through; text-decoration-color: var(--wait); color: var(--muted); }
+.stamp {
+  position: absolute; right: 18px; bottom: -22px;
+  background: var(--accent); color: var(--accent-ink);
+  font-family: var(--display); font-weight: 800; font-stretch: 100%;
+  text-transform: uppercase; font-size: 0.95rem; letter-spacing: 0.04em;
+  padding: 10px 16px; border-radius: 6px; transform: rotate(-4deg);
+  box-shadow: 0 10px 24px -12px rgba(36, 70, 255, 0.6);
+}
+.stamp small { display: block; font-family: var(--mono); font-weight: 400; font-size: 0.7rem; letter-spacing: 0.04em; text-transform: none; opacity: 0.85; }
+@media (prefers-reduced-motion: no-preference) {
+  .stamp { animation: stamp 0.5s cubic-bezier(.2, 1.6, .4, 1) 0.9s both; }
+  .pill.flip { animation: flip 0.01s linear 0.9s both; }
+  @keyframes stamp { from { transform: rotate(-12deg) scale(1.8); opacity: 0.2; } to { transform: rotate(-4deg) scale(1); opacity: 1; } }
+}
+
+/* Sections */
+section { padding-block: 72px; border-top: 1px solid var(--line); }
+.section-head { display: grid; grid-template-columns: 1fr 1.4fr; gap: 40px; align-items: end; margin-bottom: 40px; }
+.section-head > * { min-width: 0; }
+.section-head h2 { font-size: clamp(2rem, 4.4vw, 3.2rem); font-weight: 850; font-stretch: 80%; line-height: 1; text-transform: uppercase; margin-top: 10px; }
+.section-head p { color: var(--muted); margin: 0; max-width: 36em; }
+
+/* Backlog */
+.backlog { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.item {
+  background: var(--card); border: 1px solid var(--line); border-radius: 8px;
+  padding: 18px; display: grid; grid-template-rows: auto 1fr auto; gap: 12px; min-width: 0;
+}
+.item-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.item h3 { font-family: var(--body); font-weight: 600; font-size: 1.05rem; line-height: 1.4; }
+.item-foot { display: flex; justify-content: space-between; gap: 8px; border-top: 1px dashed var(--line); padding-top: 12px; color: var(--muted); }
+.item-foot b { color: var(--ink); font-weight: 600; }
+
+/* Formats */
+.formats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: var(--card); }
+.format { padding: 28px; border-bottom: 1px solid var(--line); min-width: 0; }
+.format:nth-child(odd) { border-right: 1px solid var(--line); }
+.format:nth-last-child(-n+2) { border-bottom: 0; }
+.format h3 { font-size: 1.5rem; font-weight: 800; font-stretch: 90%; margin: 8px 0 8px; }
+.format p { margin: 0; color: var(--muted); }
+
+/* Manifesto */
+.manifesto { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+.manifesto > * { min-width: 0; }
+.quote { font-family: var(--display); font-weight: 700; font-stretch: 88%; font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.15; margin: 0; text-wrap: balance; }
+.quote mark { background: var(--note); color: var(--note-ink); padding: 0 0.1em; }
+.rules { list-style: none; padding: 0; margin: 0; display: grid; gap: 18px; }
+.rules li { display: grid; grid-template-columns: 28px 1fr; gap: 12px; }
+.rules .check { width: 22px; height: 22px; border-radius: 5px; background: var(--done-bg); color: var(--done); display: grid; place-items: center; font-weight: 700; font-size: 0.85rem; margin-top: 3px; }
+.rules b { display: block; font-weight: 600; }
+.rules span.t { color: var(--muted); }
+
+/* CTA */
+.cta { background: var(--accent); color: var(--accent-ink); border-radius: 14px; padding: 48px 40px; display: grid; grid-template-columns: 1.4fr 1fr; gap: 32px; align-items: center; }
+.cta > * { min-width: 0; }
+.cta h2 { font-size: clamp(2rem, 4.6vw, 3.4rem); font-weight: 900; font-stretch: 75%; line-height: 0.95; text-transform: uppercase; }
+.cta p { margin: 14px 0 0; opacity: 0.9; max-width: 30em; }
+.cta .btn {
+  justify-self: end; display: inline-block; background: var(--note); color: var(--note-ink);
+  font-family: var(--display); font-weight: 800; text-transform: uppercase; letter-spacing: 0.03em;
+  text-decoration: none; padding: 16px 24px; border-radius: 8px;
+}
+footer { padding-block: 40px 56px; color: var(--muted); font-size: 0.9rem; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+@media (max-width: 900px) {
+  .hero, .section-head, .manifesto, .cta { grid-template-columns: 1fr; }
+  .hero { gap: 48px; padding-block: 24px 64px; }
+  .backlog { grid-template-columns: repeat(2, 1fr); }
+  .cta .btn { justify-self: start; }
+}
+@media (max-width: 600px) {
+  .backlog, .formats { grid-template-columns: 1fr; }
+  .format:nth-child(odd) { border-right: 0; }
+  .format:nth-last-child(2) { border-bottom: 1px solid var(--line); }
+  .cta { padding: 32px 22px; }
+  section { padding-block: 56px; }
+}
+</style>
+
+<div class="wrap">
+  <header class="bar">
+    <div class="brand">Marketing Relations <span>by Uniform</span></div>
+    <div class="eyebrow">Short videos · Real marketer problems</div>
+  </header>
+
+  <div class="hero">
+    <div>
+      <div class="eyebrow">A video series for marketers</div>
+      <h1>You don't need a <span class="strike">developer</span> for <mark>that!</mark></h1>
+      <p class="lede">Short videos that solve the problems marketers hit every week. Each one starts with a request you'd normally file as a dev ticket, and ends with it <strong>live, done by a marketer</strong>, before the ticket would have been triaged.</p>
+    </div>
+
+    <article class="ticket" aria-label="Example ticket">
+      <div class="ticket-head">
+        <span class="mono">MKT-1042 · Website</span>
+        <span class="pill done">Closed</span>
+      </div>
+      <h3>Swap the homepage hero for the holiday promo before the email goes out</h3>
+      <dl class="meta">
+        <dt>Assignee</dt><dd class="crossed">Web dev team</dd>
+        <dt>Estimate</dt><dd class="crossed">Next sprint</dd>
+        <dt>Status</dt><dd class="crossed">Waiting on dev</dd>
+        <dt>Done by</dt><dd>Marketing, in Uniform's visual editor</dd>
+      </dl>
+      <div class="stamp">No ticket needed<small>Episode runtime: under 90 sec</small></div>
+    </article>
+  </div>
+
+  <section aria-labelledby="backlog-h">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">The backlog we're clearing</div>
+        <h2 id="backlog-h">Requests that shouldn't need a ticket</h2>
+      </div>
+      <p>Every episode takes one everyday request, shows the usual path, then solves it on screen in about a minute. The product is just how it gets done. The skill is the point.</p>
+    </div>
+
+    <div class="backlog">
+      <article class="item">
+        <div class="item-top"><span class="mono">EP-01</span><span class="pill wait">Usually a sprint</span></div>
+        <h3>Launch a campaign landing page today, not in two weeks</h3>
+        <div class="item-foot mono"><span>Topic</span><b>Campaigns</b></div>
+      </article>
+      <article class="item">
+        <div class="item-top"><span class="mono">EP-02</span><span class="pill wait">Usually a ticket</span></div>
+        <h3>Test two headlines on the homepage and pick a winner</h3>
+        <div class="item-foot mono"><span>Topic</span><b>A/B testing</b></div>
+      </article>
+      <article class="item">
+        <div class="item-top"><span class="mono">EP-03</span><span class="pill wait">Usually a project</span></div>
+        <h3>Show returning visitors something different from first-timers</h3>
+        <div class="item-foot mono"><span>Topic</span><b>Personalization</b></div>
+      </article>
+      <article class="item">
+        <div class="item-top"><span class="mono">EP-04</span><span class="pill wait">Usually a ticket</span></div>
+        <h3>Run a promo in one region without touching the others</h3>
+        <div class="item-foot mono"><span>Topic</span><b>Localization</b></div>
+      </article>
+      <article class="item">
+        <div class="item-top"><span class="mono">EP-05</span><span class="pill wait">Usually a page to IT</span></div>
+        <h3>Fix a broken campaign page at 4:55pm on a Friday</h3>
+        <div class="item-foot mono"><span>Topic</span><b>Publishing</b></div>
+      </article>
+      <article class="item">
+        <div class="item-top"><span class="mono">EP-06</span><span class="pill wait">Usually a rebuild</span></div>
+        <h3>Reuse the same section across three brand sites</h3>
+        <div class="item-foot mono"><span>Topic</span><b>Components</b></div>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="formats-h">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Formats</div>
+        <h2 id="formats-h">Four ways in</h2>
+      </div>
+      <p>Short, screen-first, made for LinkedIn and the feeds marketers already scroll. Each format has a fixed shape so viewers know what they're getting in the first three seconds.</p>
+    </div>
+
+    <div class="formats">
+      <div class="format">
+        <div class="eyebrow">Timed challenge</div>
+        <h3>Before the ticket closes</h3>
+        <p>A real request, a running clock. Done live in less time than it takes to file the Jira ticket.</p>
+      </div>
+      <div class="format">
+        <div class="eyebrow">Weekly problem</div>
+        <h3>Marketer vs. Monday</h3>
+        <p>One everyday headache per episode: the stale banner, the urgent promo, the page nobody owns.</p>
+      </div>
+      <div class="format">
+        <div class="eyebrow">Myth-busting</div>
+        <h3>Stop asking IT</h3>
+        <p>Thirty seconds on something marketers assume needs a developer, and why it doesn't anymore.</p>
+      </div>
+      <div class="format">
+        <div class="eyebrow">Copy-paste tactic</div>
+        <h3>Steal this playbook</h3>
+        <p>A personalization rule, a test idea or a campaign structure you can lift and use the same afternoon.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="why-h">
+    <div class="manifesto">
+      <div>
+        <div class="eyebrow" id="why-h">Why this exists</div>
+        <p class="quote" style="margin-top:14px">DevRel made developers love vendors by teaching them. <mark>Marketing relations</mark> does the same for marketers.</p>
+      </div>
+      <ul class="rules">
+        <li><span class="check" aria-hidden="true">✓</span><div><b>Teach first, sell second</b><span class="t">Every video makes the viewer better at their job, whether or not they ever buy.</span></div></li>
+        <li><span class="check" aria-hidden="true">✓</span><div><b>Real problems only</b><span class="t">Requests come from marketers' actual queues, not product feature lists.</span></div></li>
+        <li><span class="check" aria-hidden="true">✓</span><div><b>Built to be forwarded</b><span class="t">Short enough to send to a CMO or an IT lead as the case for doing things differently.</span></div></li>
+        <li><span class="check" aria-hidden="true">✓</span><div><b>Under 90 seconds</b><span class="t">If it takes longer to explain than to do, it's the wrong episode.</span></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section style="border-top:0; padding-block: 24px 40px;">
+    <div class="cta">
+      <div>
+        <h2>Got a request stuck in the dev queue?</h2>
+        <p>Send it our way. The best ones become the next episode, solved on screen, start to finish.</p>
+      </div>
+      <a class="btn" href="https://uniform.dev" target="_blank" rel="noopener">See how at uniform.dev</a>
+    </div>
+  </section>
+
+  <footer>
+    <span>Marketing Relations · a Uniform series</span>
+    <span class="mono">Status: in production</span>
+  </footer>
+</div>
+
+</body></html>

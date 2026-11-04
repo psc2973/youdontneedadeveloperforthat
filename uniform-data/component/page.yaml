@@ -1,0 +1,23 @@
+{
+  "id": "page",
+  "name": "Page",
+  "icon": "screen",
+  "canBeComposition": true,
+  "parameters": [],
+  "slots": [
+    {
+      "id": "content",
+      "name": "Content",
+      "allowedComponents": [
+        "siteHeader",
+        "hero",
+        "backlog",
+        "formats",
+        "manifesto",
+        "callToAction",
+        "siteFooter"
+      ],
+      "inheritAllowedComponents": false
+    }
+  ]
+}

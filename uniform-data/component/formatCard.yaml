@@ -1,0 +1,41 @@
+{
+  "id": "formatCard",
+  "name": "Format Card",
+  "icon": "screen",
+  "titleParameter": "title",
+  "parameters": [
+    {
+      "id": "kind",
+      "name": "Kind",
+      "type": "text",
+      "typeConfig": {
+        "multiline": false
+      }
+    },
+    {
+      "id": "title",
+      "name": "Title",
+      "type": "text",
+      "typeConfig": {
+        "multiline": false
+      }
+    },
+    {
+      "id": "description",
+      "name": "Description",
+      "type": "text",
+      "typeConfig": {
+        "multiline": true
+      }
+    },
+    {
+      "id": "aside",
+      "name": "Handwritten aside",
+      "type": "text",
+      "typeConfig": {
+        "multiline": false
+      }
+    }
+  ],
+  "slots": []
+}

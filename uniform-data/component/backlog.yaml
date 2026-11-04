@@ -1,0 +1,42 @@
+{
+  "id": "backlog",
+  "name": "Backlog",
+  "icon": "screen",
+  "titleParameter": "title",
+  "parameters": [
+    {
+      "id": "eyebrow",
+      "name": "Eyebrow",
+      "type": "text",
+      "typeConfig": {
+        "multiline": false
+      }
+    },
+    {
+      "id": "title",
+      "name": "Title",
+      "type": "text",
+      "typeConfig": {
+        "multiline": false
+      }
+    },
+    {
+      "id": "intro",
+      "name": "Intro",
+      "type": "text",
+      "typeConfig": {
+        "multiline": true
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "items",
+      "name": "Episodes",
+      "allowedComponents": [
+        "episodeCard"
+      ],
+      "inheritAllowedComponents": false
+    }
+  ]
+}

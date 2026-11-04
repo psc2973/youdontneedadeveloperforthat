@@ -1,0 +1,465 @@
+{
+  "composition": {
+    "_id": "d57cc47b-b7ff-54d6-a974-8d3edbbc1edd",
+    "_name": "Home",
+    "type": "page",
+    "parameters": {},
+    "slots": {
+      "content": [
+        {
+          "_id": "26ab8577-c9a5-52fe-a510-4849f686f79c",
+          "type": "siteHeader",
+          "parameters": {
+            "brand": {
+              "type": "text",
+              "value": "Marketing Relations"
+            },
+            "brandSuffix": {
+              "type": "text",
+              "value": "by Uniform"
+            },
+            "eyebrow": {
+              "type": "text",
+              "value": "Short videos · Real marketer wins"
+            }
+          }
+        },
+        {
+          "_id": "05a64c70-4a78-5c7e-a2e0-c5ca0a9117c6",
+          "type": "hero",
+          "parameters": {
+            "eyebrow": {
+              "type": "text",
+              "value": "Congratulations on your new role"
+            },
+            "headline": {
+              "type": "text",
+              "value": "You are now"
+            },
+            "headlineHighlight": {
+              "type": "text",
+              "value": "the developer."
+            },
+            "tagline": {
+              "type": "text",
+              "value": "One more hat to wear. You'll like this one."
+            },
+            "lede": {
+              "type": "text",
+              "value": "Short, fun videos where marketers build the page, launch the test and ship the promo themselves."
+            },
+            "ledeStrong": {
+              "type": "text",
+              "value": "Same afternoon, no ticket."
+            },
+            "ledeAfter": {
+              "type": "text",
+              "value": "Then they go eat lunch somewhere that isn't their desk."
+            },
+            "badgeRole": {
+              "type": "text",
+              "value": "Marketer"
+            },
+            "badgeAdded": {
+              "type": "text",
+              "value": "developer"
+            },
+            "badgePill": {
+              "type": "text",
+              "value": "New hat unlocked"
+            },
+            "calTime": {
+              "type": "text",
+              "value": "12:00"
+            },
+            "calTitle": {
+              "type": "text",
+              "value": "Lunch"
+            },
+            "calNote": {
+              "type": "text",
+              "value": "Away from desk. Holiday promo already live."
+            },
+            "calStatus": {
+              "type": "text",
+              "value": "Done"
+            }
+          }
+        },
+        {
+          "_id": "a1db38d5-f900-5f47-aa51-adb64345fd15",
+          "type": "backlog",
+          "parameters": {
+            "eyebrow": {
+              "type": "text",
+              "value": "Your new job description"
+            },
+            "title": {
+              "type": "text",
+              "value": "Things you can do yourself now"
+            },
+            "intro": {
+              "type": "text",
+              "value": "Each episode takes one everyday request and solves it on screen in about a minute. The skill is the point. The product is just how it gets done."
+            }
+          },
+          "slots": {
+            "items": [
+              {
+                "_id": "fde56742-d4ce-5675-a85b-894bf14bacfd",
+                "type": "episodeCard",
+                "parameters": {
+                  "episodeId": {
+                    "type": "text",
+                    "value": "EP-01"
+                  },
+                  "status": {
+                    "type": "text",
+                    "value": "Done by you"
+                  },
+                  "title": {
+                    "type": "text",
+                    "value": "Launch a campaign landing page the same day the idea shows up"
+                  },
+                  "topic": {
+                    "type": "text",
+                    "value": "Campaigns"
+                  }
+                }
+              },
+              {
+                "_id": "202ac22e-ab20-5306-a09c-0cef0e22a050",
+                "type": "episodeCard",
+                "parameters": {
+                  "episodeId": {
+                    "type": "text",
+                    "value": "EP-02"
+                  },
+                  "status": {
+                    "type": "text",
+                    "value": "Done by you"
+                  },
+                  "title": {
+                    "type": "text",
+                    "value": "Test two headlines on the homepage and crown a winner"
+                  },
+                  "topic": {
+                    "type": "text",
+                    "value": "A/B testing"
+                  }
+                }
+              },
+              {
+                "_id": "77829dd0-9540-5cae-ac11-c9ec062fe547",
+                "type": "episodeCard",
+                "parameters": {
+                  "episodeId": {
+                    "type": "text",
+                    "value": "EP-03"
+                  },
+                  "status": {
+                    "type": "text",
+                    "value": "Done by you"
+                  },
+                  "title": {
+                    "type": "text",
+                    "value": "Greet returning visitors with something new"
+                  },
+                  "topic": {
+                    "type": "text",
+                    "value": "Personalization"
+                  }
+                }
+              },
+              {
+                "_id": "88f9d35d-fb0a-519a-a940-f0c415cfadae",
+                "type": "episodeCard",
+                "parameters": {
+                  "episodeId": {
+                    "type": "text",
+                    "value": "EP-04"
+                  },
+                  "status": {
+                    "type": "text",
+                    "value": "Done by you"
+                  },
+                  "title": {
+                    "type": "text",
+                    "value": "Run a promo in one region and leave the others alone"
+                  },
+                  "topic": {
+                    "type": "text",
+                    "value": "Localization"
+                  }
+                }
+              },
+              {
+                "_id": "5f097f29-343c-565c-aa20-44bd52109620",
+                "type": "episodeCard",
+                "parameters": {
+                  "episodeId": {
+                    "type": "text",
+                    "value": "EP-05"
+                  },
+                  "status": {
+                    "type": "text",
+                    "value": "Done by you"
+                  },
+                  "title": {
+                    "type": "text",
+                    "value": "Fix a campaign page at 4:55pm Friday and still leave on time"
+                  },
+                  "topic": {
+                    "type": "text",
+                    "value": "Publishing"
+                  }
+                }
+              },
+              {
+                "_id": "696c1128-e436-52ad-ad56-7dbe705c14b3",
+                "type": "episodeCard",
+                "parameters": {
+                  "episodeId": {
+                    "type": "text",
+                    "value": "EP-06"
+                  },
+                  "status": {
+                    "type": "text",
+                    "value": "Done by you"
+                  },
+                  "title": {
+                    "type": "text",
+                    "value": "Reuse your best section across three brand sites"
+                  },
+                  "topic": {
+                    "type": "text",
+                    "value": "Components"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "_id": "c05df104-c6f5-5f45-acfa-3c028de582b1",
+          "type": "formats",
+          "parameters": {
+            "eyebrow": {
+              "type": "text",
+              "value": "Formats"
+            },
+            "title": {
+              "type": "text",
+              "value": "Four ways to wear the hat"
+            },
+            "intro": {
+              "type": "text",
+              "value": "Short, screen-first and a little silly, made for LinkedIn and the feeds marketers already scroll. Every format has a shape viewers recognize in the first three seconds."
+            }
+          },
+          "slots": {
+            "items": [
+              {
+                "_id": "90268042-d8d6-54d8-ab69-be0bb3907050",
+                "type": "formatCard",
+                "parameters": {
+                  "kind": {
+                    "type": "text",
+                    "value": "Timed challenge"
+                  },
+                  "title": {
+                    "type": "text",
+                    "value": "Back before lunch"
+                  },
+                  "description": {
+                    "type": "text",
+                    "value": "A real request lands at 11:48. The clock runs. It ships, and the episode ends with the marketer eating lunch outside, phone face down."
+                  }
+                }
+              },
+              {
+                "_id": "212be82a-b4c0-52f3-a0d8-525150021c6c",
+                "type": "formatCard",
+                "parameters": {
+                  "kind": {
+                    "type": "text",
+                    "value": "Dramatic short"
+                  },
+                  "title": {
+                    "type": "text",
+                    "value": "The developer who wasn't needed"
+                  },
+                  "description": {
+                    "type": "text",
+                    "value": "Moody lighting, slow zoom, a developer staring at an empty ticket queue in disbelief. Played completely straight, then the reveal: the marketer did it already."
+                  },
+                  "aside": {
+                    "type": "text",
+                    "value": "Devs get their afternoon back too."
+                  }
+                }
+              },
+              {
+                "_id": "ad23e6c3-d882-550d-a03a-fdd2cdc47f50",
+                "type": "formatCard",
+                "parameters": {
+                  "kind": {
+                    "type": "text",
+                    "value": "Weekly win"
+                  },
+                  "title": {
+                    "type": "text",
+                    "value": "Marketer vs. Monday"
+                  },
+                  "description": {
+                    "type": "text",
+                    "value": "One everyday headache per episode, from the stale banner to the urgent promo, solved with a grin."
+                  }
+                }
+              },
+              {
+                "_id": "cd71827b-7fa8-5ee5-a1a0-f930e9839b0f",
+                "type": "formatCard",
+                "parameters": {
+                  "kind": {
+                    "type": "text",
+                    "value": "Copy-paste tactic"
+                  },
+                  "title": {
+                    "type": "text",
+                    "value": "Steal this playbook"
+                  },
+                  "description": {
+                    "type": "text",
+                    "value": "A personalization rule, a test idea or a campaign structure you can lift and use the same afternoon."
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "_id": "b66ebc58-8cac-5a6b-a347-24cc26ec25a1",
+          "type": "manifesto",
+          "parameters": {
+            "eyebrow": {
+              "type": "text",
+              "value": "Why this exists"
+            },
+            "quoteBefore": {
+              "type": "text",
+              "value": "DevRel made developers love vendors by teaching them."
+            },
+            "quoteHighlight": {
+              "type": "text",
+              "value": "Marketing relations"
+            },
+            "quoteAfter": {
+              "type": "text",
+              "value": "does the same for marketers."
+            }
+          },
+          "slots": {
+            "rules": [
+              {
+                "_id": "f7e095b3-aadf-54e8-a892-8bcbb97897f1",
+                "type": "manifestoRule",
+                "parameters": {
+                  "title": {
+                    "type": "text",
+                    "value": "Teach first, sell second"
+                  },
+                  "text": {
+                    "type": "text",
+                    "value": "Every video makes the viewer better at their job, whether or not they ever buy."
+                  }
+                }
+              },
+              {
+                "_id": "f9eccf81-c922-59ca-a9d9-67207dc7fd41",
+                "type": "manifestoRule",
+                "parameters": {
+                  "title": {
+                    "type": "text",
+                    "value": "Celebrate the marketer"
+                  },
+                  "text": {
+                    "type": "text",
+                    "value": "They're the hero of every episode. Developers are teammates, never the villain."
+                  }
+                }
+              },
+              {
+                "_id": "8bfe73a5-103a-5487-ae98-243f2ed326f2",
+                "type": "manifestoRule",
+                "parameters": {
+                  "title": {
+                    "type": "text",
+                    "value": "Built to be shared"
+                  },
+                  "text": {
+                    "type": "text",
+                    "value": "Fun enough to post, useful enough to forward to a CMO as the case for working differently."
+                  }
+                }
+              },
+              {
+                "_id": "0e0085a4-d136-503d-a0c5-9cb2859d393b",
+                "type": "manifestoRule",
+                "parameters": {
+                  "title": {
+                    "type": "text",
+                    "value": "Under 90 seconds"
+                  },
+                  "text": {
+                    "type": "text",
+                    "value": "If it takes longer to explain than to do, it's the wrong episode."
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "_id": "78e43bdb-a630-5f8e-a131-061c712bc4ab",
+          "type": "callToAction",
+          "parameters": {
+            "headline": {
+              "type": "text",
+              "value": "What would you ship if you didn't have to wait?"
+            },
+            "body": {
+              "type": "text",
+              "value": "Tell us. The best ideas become the next episode, built on screen by a marketer, start to finish."
+            },
+            "buttonLabel": {
+              "type": "text",
+              "value": "Try the hat on at uniform.dev"
+            },
+            "buttonLink": {
+              "type": "link",
+              "value": {
+                "type": "url",
+                "path": "https://uniform.dev"
+              }
+            }
+          }
+        },
+        {
+          "_id": "60064a04-ac89-5a26-a267-b69b5736af3a",
+          "type": "siteFooter",
+          "parameters": {
+            "text": {
+              "type": "text",
+              "value": "Marketing Relations · a Uniform series"
+            },
+            "status": {
+              "type": "text",
+              "value": "Status: in production"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "id": "e82eb184-e74d-40b8-a705-8346f5eb8026",
+  "name": "Home",
+  "order": 500,
+  "path": "/home",
+  "type": "composition",
+  "compositionId": "d57cc47b-b7ff-54d6-a974-8d3edbbc1edd"
+}

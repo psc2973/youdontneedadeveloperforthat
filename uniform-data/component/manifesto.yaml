@@ -1,0 +1,50 @@
+{
+  "id": "manifesto",
+  "name": "Manifesto",
+  "icon": "screen",
+  "titleParameter": "eyebrow",
+  "parameters": [
+    {
+      "id": "eyebrow",
+      "name": "Eyebrow",
+      "type": "text",
+      "typeConfig": {
+        "multiline": false
+      }
+    },
+    {
+      "id": "quoteBefore",
+      "name": "Quote (before highlight)",
+      "type": "text",
+      "typeConfig": {
+        "multiline": true
+      }
+    },
+    {
+      "id": "quoteHighlight",
+      "name": "Quote highlight",
+      "type": "text",
+      "typeConfig": {
+        "multiline": false
+      }
+    },
+    {
+      "id": "quoteAfter",
+      "name": "Quote (after highlight)",
+      "type": "text",
+      "typeConfig": {
+        "multiline": true
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "rules",
+      "name": "Rules",
+      "allowedComponents": [
+        "manifestoRule"
+      ],
+      "inheritAllowedComponents": false
+    }
+  ]
+}
